@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+    <title>Controle de Validade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Validade</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in produtos %}
+      <tr>
+        <td>{{ p.nome }}</td>
+        <td>{{ p.validade }}</td>
+        <td class="{% if p.status == 'Vencido' %}vencido{% elif p.status == 'Próximo de vencer' %}proximo{% else %}ok{% endif %}">
+          {{ p.status }}
+        </td>
+        <td>
+          <form action="{{ url_for('editar', id=p.id) }}" method="get">
+            <button type="submit" class="btn-editar">Editar</button>
+          </form>
+          <form action="{{ url_for('apagar', id=p.id) }}" method="post">
+            <button type="submit" class="btn-apagar" onclick="return confirm('Tem certeza que deseja apagar?')">Apagar</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>  
+</body>
+  <a href="{{ url_for('adicionar') }}" class="btn-float">+</a>
+</html> 
