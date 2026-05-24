@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 10;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 4px 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  text-transform: uppercase;
+}
+
+tr {
+  line-height: 1.2;    /* controla altura da linha */
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+td form {
+  margin: 5px 0;
+}
+.vencido {
+  background: #dc3545;
+  color: #fff;
+  font-weight: bold;
+}
+
+.proximo {
+  background: #ffc107;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ok {
+  background: #28a745;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-editar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.btn-editar:hover {
+  background-color: #0056b3;
+}
+
+.btn-apagar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-apagar:hover {
+  background-color: #a71d2a;
+}
+
+.btn-editar, .btn-apagar {
+  width: 100%;       
+  display: block; 
+}
+
+.btn-float {
+  position: fixed;
+  bottom: 20px;       
+  right: 20px;       
+  width: 60px;
+  height: 60px;
+  background-color: #28a745; 
+  color: white;
+  border-radius: 50%; 
+  text-align: center;
+  font-size: 32px;
+  line-height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-float:hover {
+  background-color: #218838;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn-salvar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn-salvar:hover {
+  background-color: #218838;
+}
